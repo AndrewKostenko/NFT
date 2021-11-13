@@ -1,0 +1,138 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: $font-size;
+	font-weight: 700;
+	font-family: $font-family;
+	&.lock {
+		overflow: hidden;
+	}
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+// ===============================================================================================================
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	width: 100%;
+	max-width: $container-width + $container-padding * 2;
+	padding: 0 $container-padding;
+	margin: 0 auto;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 26px;
+	border-radius: 10px;
+	background: linear-gradient(133deg, #ffc301 9.31%, #ff6533 79.4%);
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 35 / 20 * 100%;
+	letter-spacing: 0.02em;
+	color: white;
+	transition: 300ms;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
+	&-transparent {
+		background: transparent;
+		border: 1px solid $orange;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $orange;
+			}
+		}
+	}
+	&-blue {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+			linear-gradient(140.08deg, #9cd2ee 3.42%, #00acee 95.98%);
+	}
+}
+
+.title {
+	font-size: 48px;
+	line-height: 68 / 48 * 100%;
+	letter-spacing: 0.02em;
+	color: $black;
+}
+.text {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 33 / 20 * 100%;
+	letter-spacing: 0.02em;
+	color: $black;
+}
